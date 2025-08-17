@@ -30,13 +30,14 @@ urlpatterns = [
 
 # backend/core/urls.py
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from django.http import JsonResponse
 
 def health(_request):
     return JsonResponse({"status": "ok"})
 
 urlpatterns = [
+    path("health/", health),              # ← add this line
     path("admin/", admin.site.urls),
-    path("health/", health),
+    path("api/", include("api.urls")),    # keep if you already have it
 ]
