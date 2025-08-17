@@ -12,3 +12,5 @@ psycopg2-binary==2.9.9
 
 dj-database-url==2.3.0
 psycopg2-binary==2.9.9
+
+whitenoise[brotli]==6.6.0
