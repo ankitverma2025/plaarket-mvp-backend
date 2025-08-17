@@ -10,6 +10,16 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
+# at top
+import os
+
+# allow your backend host + local
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "plaarket-mvp-backend-sg.onrender.com,localhost,127.0.0.1").split(",")
+
+# temporarily allow all origins so frontend can call API
+CORS_ALLOW_ALL_ORIGINS = True
+
+
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -24,9 +34,6 @@ SECRET_KEY = "django-insecure-6m$@m9$i&^h3lyomd@ki#6_=_d&25hq!z$e&oy@q9vtky6o-v$
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -63,8 +70,6 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",   # Vite
     "http://127.0.0.1:5173",
 ]
-
-CORS_ALLOW_ALL_ORIGINS = True
 
 ROOT_URLCONF = "core.urls"
 
