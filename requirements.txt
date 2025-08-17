@@ -8,9 +8,9 @@ wheel==0.45.1
 gunicorn==21.2.0
 
 dj-database-url==2.3.0
-psycopg2-binary==2.9.9
 
 dj-database-url==2.3.0
-psycopg2-binary==2.9.9
 
 whitenoise[brotli]==6.6.0
+
+psycopg[binary]==3.2.1
