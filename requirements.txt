@@ -1,16 +1,12 @@
 asgiref==3.9.1
 Django==5.2.5
-django-cors-headers==4.7.0
 djangorestframework==3.16.1
-setuptools==80.9.0
-sqlparse==0.5.3
-wheel==0.45.1
+django-cors-headers==4.7.0
 gunicorn==21.2.0
+sqlparse==0.5.3
+setuptools==80.9.0
+wheel==0.45.1
 
 dj-database-url==2.3.0
-
-dj-database-url==2.3.0
-
 whitenoise[brotli]==6.6.0
-
-psycopg[binary]==3.2.1
+psycopg[binary]==3.2.9
